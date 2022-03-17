@@ -1,6 +1,6 @@
 import statsapi
 import json
-import pandas as pd
+#import pandas as pd
 
 
 def final_games_dict(games_, team_id):
@@ -20,8 +20,7 @@ def final_games_dict(games_, team_id):
 def get_all_regular_games(team_ids, start_year=2021, end_year=2021):
     """This function creates a JSON file of all regular season game ids between a given start and end date for a given
     list of teams.  The function uses a while loop because the 'schedule' method from statsapi cannot retrieve more
-    than one season at a time.  It also avoids duplicate game entries by only appending the game id for the home team.
-    Otherwise, there would be two of each game."""
+    than one season at a time."""
     games = []
     while start_year <= end_year:
         for team in team_ids:
@@ -65,5 +64,5 @@ def Retrieve_Player_Data(player_id):
 
 
 if __name__ == '__main__':
-    get_all_regular_games([136])
-    Retrieve_Box_Scores(136)
+    #get_all_regular_games([136])
+    #Retrieve_Box_Scores(136)
